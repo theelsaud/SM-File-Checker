@@ -2,8 +2,6 @@
 
 ## [1.0.0]
 
-### Added
-
+# Release
 ### Fixed
-
-### Removed
+- Fix paths
