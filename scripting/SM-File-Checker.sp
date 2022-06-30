@@ -97,7 +97,11 @@ Action FileChecker(Handle hTimer)
 			{
 				g_hFiles.Set(i, iTime, FileInfo::iLastTimeUpdate);
 
-				if(hCurrentFile.iLastTimeUpdate != 0) ServerCommand(hCurrentFile.sCommand);
+				if(hCurrentFile.iLastTimeUpdate != 0) 
+				{
+					PrintToServer("[SM File Checker] File [ %s ] updated. Running command...", hCurrentFile.sPath);
+					ServerCommand(hCurrentFile.sCommand);
+				}
 			}
 		}
 	}
